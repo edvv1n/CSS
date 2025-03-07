@@ -45,3 +45,46 @@ body {
     line-height: 16px;
 
 }
+#box-container {
+  background: white;
+  padding: 30px
+}
+.box1 {
+  background-color: brown;
+  height: 300px;
+  width: 300px;
+}
+.box2 {
+  background-color: blue;
+  height: 300px;
+  width: 300px;
+  /* display: none; */
+  visibility: hidden;
+}
+.box3 {
+  background-color: yellow;
+  height: 300px;
+  width: 300px;
+}
+
+#inline > p {
+  color: yellow;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bolder;
+  display: inline; /* this will make the elements inline. P tag elements are naturally block level elements */
+}
+
+#block > a {
+  color: orangered;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bolder;
+  display: block;
+}
+
+#inline-block > span {
+  color: white;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  display: inline-block;
+  width: 150px;
+  height: 135px;
+}
