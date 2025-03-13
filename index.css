@@ -27,9 +27,13 @@ body {
   justify-content: space-between;
   padding: 20px 30px;
   height: fit-content;
+  position: sticky;
+  top: 0px;
+  z-index: 5;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bolder;
 }
+
 
 #right {
   display: flex;
@@ -282,3 +286,159 @@ font-size: 20px;
   height: 100vh;
   gap: 10px;
 }
+
+.body {
+  background: white;
+}
+
+#position > section {
+  height: 100vh;
+  width: 100vw;
+}
+
+#static {
+  background-color: yellowgreen;
+  position: relative;
+}
+#static-box {
+background-color: black;
+height: 100px;
+width: 100px;
+}
+
+#absolute {
+  background-color: grey;
+  position: relative;
+}
+#absolute-box {
+  background-color: maroon;
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  z-index: 2;
+  }
+
+#fixed {
+  background-color: wheat;
+  position: relative;
+}
+#fixed-box {
+  background-color: crimson;
+  height: 100px;
+  width: 100px;
+  position: fixed;
+  left:  8px;
+  top: 0px;
+  z-index: 1;
+  }
+
+#relative {
+  background-color: pink;
+  position: relative;
+}
+#relative-box {
+  background-color: darkolivegreen;
+  height: 100px;
+  width: 100px;
+  }
+
+#sticky {
+  background-color: cyan;
+  position: relative;
+}
+#sticky-box {
+  background-color: midnightblue;
+  height: 100px;
+  width: 100px;
+  position: sticky;
+  top: 100px;
+  }
+
+  /* 
+  To make NavBar stick on contact list, use the styling below
+  
+  #navigation {
+    position: sticky;
+    top: 0px;
+    z-index: 5;
+  }
+
+  #pgtitle {
+    background-color: black;
+    position: sticky;
+    top: 60px;
+    z-index: 2;
+    }
+
+    #a h2 {
+      position: sticky;
+      top: 115px;
+      z-index: 1;
+      }
+
+      #b h2 {
+        position: sticky;
+        top: 115px;
+        z-index: 1;
+        }
+
+        #c h2 {
+          position: sticky;
+          top: 115px;
+          z-index: 1;
+          } */
+
+  #pgtitle {
+    background-color: black;
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+    }
+
+    #a h2 {
+      position: sticky;
+      top: 50px;
+      z-index: 1;
+      }
+
+      #b h2 {
+        position: sticky;
+        top: 50px;
+        z-index: 1;
+        }
+
+        #c h2 {
+          position: sticky;
+          top: 50px;
+          z-index: 1;
+          }
+
+          #backtotop {
+            text-decoration: none;
+            color: aquamarine;
+          }
+
+          #backtotop > a {
+            color: aquamarine;
+            text-decoration: none;
+            text-transform: capitalize;
+            align-items: center;
+          }
+          
+          #backtotop > button {
+            background-color: aquamarine;
+            border: 2px solid black;
+            height: 50px;
+            width: 50px;
+            font-weight: bold;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 15px;
+            padding: 5px;
+            border-radius:50%;
+            cursor: pointer;
+            position: fixed;
+            right: 20px;
+            bottom: 10px;
+          }
