@@ -27,13 +27,13 @@ body {
   justify-content: space-between;
   padding: 20px 30px;
   height: fit-content;
+  width: 100vw;
   position: sticky;
   top: 0px;
   z-index: 5;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bolder;
 }
-
 
 #right {
   display: flex;
@@ -301,9 +301,9 @@ font-size: 20px;
   position: relative;
 }
 #static-box {
-background-color: black;
-height: 100px;
-width: 100px;
+  background-color: black;
+  height: 100px;
+  width: 100px;
 }
 
 #absolute {
@@ -318,7 +318,7 @@ width: 100px;
   left: 0px;
   bottom: 0px;
   z-index: 2;
-  }
+}
 
 #fixed {
   background-color: wheat;
@@ -329,10 +329,10 @@ width: 100px;
   height: 100px;
   width: 100px;
   position: fixed;
-  left:  8px;
+  left: 8px;
   top: 0px;
   z-index: 1;
-  }
+}
 
 #relative {
   background-color: pink;
@@ -342,7 +342,7 @@ width: 100px;
   background-color: darkolivegreen;
   height: 100px;
   width: 100px;
-  }
+}
 
 #sticky {
   background-color: cyan;
@@ -354,9 +354,9 @@ width: 100px;
   width: 100px;
   position: sticky;
   top: 100px;
-  }
+}
 
-  /* 
+/* 
   To make NavBar stick on contact list, use the styling below
   
   #navigation {
@@ -390,55 +390,112 @@ width: 100px;
           z-index: 1;
           } */
 
-  #pgtitle {
-    background-color: black;
-    position: sticky;
-    top: 0px;
-    z-index: 2;
-    }
+#pgtitle {
+  background-color: black;
+  position: sticky;
+  top: 0px;
+  z-index: 2;
+}
 
-    #a h2 {
-      position: sticky;
-      top: 50px;
-      z-index: 1;
-      }
+#a h2 {
+  position: sticky;
+  top: 50px;
+  z-index: 1;
+}
 
-      #b h2 {
-        position: sticky;
-        top: 50px;
-        z-index: 1;
-        }
+#b h2 {
+  position: sticky;
+  top: 50px;
+  z-index: 1;
+}
 
-        #c h2 {
-          position: sticky;
-          top: 50px;
-          z-index: 1;
-          }
+#c h2 {
+  position: sticky;
+  top: 50px;
+  z-index: 1;
+}
 
-          #backtotop {
-            text-decoration: none;
-            color: aquamarine;
-          }
+#backtotop {
+  text-decoration: none;
+  color: aquamarine;
+}
 
-          #backtotop > a {
-            color: aquamarine;
-            text-decoration: none;
-            text-transform: capitalize;
-            align-items: center;
-          }
-          
-          #backtotop > button {
-            background-color: aquamarine;
-            border: 2px solid black;
-            height: 50px;
-            width: 50px;
-            font-weight: bold;
-            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 15px;
-            padding: 5px;
-            border-radius:50%;
-            cursor: pointer;
-            position: fixed;
-            right: 20px;
-            bottom: 10px;
-          }
+#backtotop > a {
+  color: aquamarine;
+  text-decoration: none;
+  text-transform: capitalize;
+  align-items: center;
+}
+
+#backtotop > button {
+  background-color: aquamarine;
+  border: 2px solid black;
+  height: 50px;
+  width: 50px;
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: fixed;
+  right: 20px;
+  bottom: 10px;
+}
+
+.grid-container {
+  display: grid;
+  background-color: grey;
+  padding: 10px;
+  width: fit-content;
+  grid-template-columns: repeat(4, 200px);
+  grid-template-rows: repeat(4, 200px);
+  gap: 10px;
+  justify-items: stretch;
+  align-items: stretch;
+  background-image: url();
+  /* grid-template-columns: repeat(8, 1fr); this is the shortcut to creating multi grids */
+  /* grid-template-rows: 100px 200px 300px; */
+  /* grid-template-columns: 100px 100px 100px; */
+}
+
+.grid-container > div {
+  background-color: #000;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  /* border: 1px solid white; */
+  border-radius: 15px;
+  /* height: 100px;
+            width: 100px; */
+}
+
+.grid-container > :nth-child(1) {
+  /* background-color: aquamarine; */
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  background-image: url("https://images.unsplash.com/photo-1504600770771-fb03a6961d33?q=80&w=1164&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+}
+.grid-container > :nth-child(2) {
+  background-color: bisque;
+  background-image: url("https://images.unsplash.com/photo-1583322378535-ffaa89e72815?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+.grid-container > :nth-child(3) {
+  background-color: bisque;
+  background-image: url("https://images.unsplash.com/photo-1741261498263-a5704667520d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+}
+.grid-container > :nth-child(4) {
+  background-color: bisque;
+  background-image: url("https://images.unsplash.com/photo-1616197151166-93dc9b4528d8?q=80&w=928&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+}
+/* .grid-container > :first-child{
+            background-color: purple;
+          } */
